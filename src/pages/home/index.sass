@@ -1,0 +1,234 @@
+@use "swiper/scss"
+    
+.container 
+    border: 1px solid #42567a10
+    height: 100vh
+    margin: 0 10%
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    @media (max-width: 428px)
+        margin: 0
+        border: none
+        padding:  20px 
+
+
+    &::before
+        content: ""
+        border: 1px solid #42567a10
+        position: absolute
+        width: 100%
+        top: 50%
+        left: 0
+        z-index: 0
+
+        @media (max-width: 428px)
+            left: 10%
+            width: 80%
+
+    &::after
+        content: ""
+        border: 1px solid #42567a10
+        position: absolute
+        height: 100%
+        top: 0
+        left: 50%
+        z-index: 0
+
+        @media (max-width: 428px)
+            border: none
+
+
+    &__page-title
+        margin-top: 100px
+        display: flex
+        flex-direction: row
+        align-items: center
+        gap: 10px
+        max-width: 450px
+        height: 110px
+        justify-content: space-between
+
+        @media (max-width: 428px)
+            max-width: 100px
+            margin-top: 40px
+
+    &__page-title > div 
+        display: flex
+        width: 5px
+        height: 100%
+        background: linear-gradient(180deg, #3877EE, #EF5DA8 85%)
+
+    @media (max-width: 428px)
+        &__page-title > div 
+            display: none
+
+
+    &__title
+        width: 320px
+        font-family: PT Sans
+        font-weight: 700
+        font-size: 46px
+        line-height: 67.2px
+        letter-spacing: 0%
+        color: #42567A
+
+    @media (max-width: 428px)
+        &__title
+            font-family: PT Sans
+            font-weight: 700
+            font-size: 20px
+            line-height: 24px
+            letter-spacing: 0%
+
+
+    &__circle-container
+        position: absolute
+        display: flex
+        width: 100%
+        height: 100%
+        justify-content: center
+        align-items: center
+        z-index: 1
+        left: 0
+        top: 0
+
+        
+
+    &__circle
+        position: relative
+        border: 1px solid #42567a35
+        width: 300px
+        height: 300px
+        border-radius: 100%
+        box-sizing: border-box
+
+        @media (max-width: 428px)
+            border: none
+
+        
+
+    
+
+    &__point
+        width: 5px
+        height: 5px
+        display: flex
+        align-items: center
+        justify-content: center
+        position: absolute
+        z-index: 1
+        border-radius: 100%
+        background-color: #42567ad8
+        top: -2.5px
+        left: -2.5px
+        cursor: pointer
+
+        @media (max-width: 428px)
+            display: none
+
+    &__circle-btn
+        width: 20px
+        height: 20px
+        transform: scale(0)
+        transition: none
+
+    &__years
+        display: flex
+        flex-direction: row
+        gap: 30px
+        position: absolute
+        top: 60px
+        left: -165px
+        font-family: PT Sans
+        font-weight: 700
+        font-size: 130px
+        line-height: 160px
+        letter-spacing: -2%
+        text-align: center
+        color: #3877EE
+
+        @media (max-width: 428px)
+            font-family: PT Sans
+            font-weight: 700
+            font-size: 56px
+            line-height: 72.46px
+            letter-spacing: -2%
+            left: 10px
+            top: 0px
+
+
+        &-to
+            color: #f18fc2
+
+    @media (max-wdith: 428px) 
+        display: flex
+
+
+    &__articles
+        display: flex
+        flex-direction: column
+        gap: 15px
+        margin-bottom: 30px 
+
+        @media (max-width: 428px)
+            width: auto
+            gap: 60px
+            margin-bottom: 30px
+
+    &__pagination
+        display: flex
+        flex-direction: column
+        gap: 15px
+        margin-left: 90px
+
+        @media (max-width: 428px)
+            order: 2
+            margin-left: 0
+
+    &__pagination-page
+        font-family: PT Sans
+        font-weight: 400
+        font-size: 14px
+        line-height: 18.12px
+        letter-spacing: 0%
+        color: #42567A
+
+    &__buttons 
+        display: flex
+        flex-direction: row
+        gap: 15px
+        align-items: center
+
+        
+        
+        
+
+    &__right-button, &__left-button
+        width: 40px
+        height: 40px
+        box-sizing: border-box
+
+    &__pagination-points
+        display: none
+
+        @media (max-width: 428px)
+            display: flex
+            flex-direction: row
+            gap: 10px
+            margin-left: 20px
+            z-index: 2
+
+    &__pagination-point
+        width: 6px
+        height: 6px
+        border-radius: 100%
+        background-color: black
+
+.opacity 
+    opacity: 0.3
+
+        
+
